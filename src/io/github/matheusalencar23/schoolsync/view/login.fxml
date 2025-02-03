@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="io.github.matheusalencar23.schoolsync.controller.LoginController"
+    xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    alignment="CENTER" spacing="20"
+    style="-fx-background-color: #f0f0f0; -fx-padding: 30;">
+
+    <Label text="SchoolSync"
+        style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #4facfe;" />
+
+    <TextField fx:id="usernameField" promptText="Usuário"
+        style="-fx-font-size: 14px; -fx-padding: 10;" />
+    <PasswordField fx:id="passwordField" promptText="Senha"
+        style="-fx-font-size: 14px; -fx-padding: 10;" />
+
+    <Button text="Entrar" style="-fx-font-size: 16px; -fx-padding: 10;" onAction="#handleLogin" />
+
+    <Label fx:id="errorLabel" text="" style="-fx-font-size: 12px; -fx-text-fill: red;" />
+</VBox>
