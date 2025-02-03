@@ -21,3 +21,11 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 ## Used dependencies
 
 - mysql-connector-j-9.2.0.jar
+- javafx-swt.jar
+- javafx.base.jar
+- javafx.controls.jar
+- javafx.fxml.jar
+- javafx.graphics.jar
+- javafx.media.jar
+- javafx.swing.jar
+- javafx.web.jar
