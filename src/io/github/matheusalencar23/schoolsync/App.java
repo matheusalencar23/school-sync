@@ -1,14 +1,19 @@
 package io.github.matheusalencar23.schoolsync;
 
-import java.sql.Connection;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-import io.github.matheusalencar23.schoolsync.db.DbConnectionFactory;
-
-public class App {
+public class App extends Application {
     public static void main(String[] args) throws Exception {
-        Connection conn = DbConnectionFactory.getConnection();
-        System.out.println("DB Connection Successful");
+        launch(args);
+    }
 
-        conn.close();
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Scholl sync");
+        primaryStage.setScene(new Scene(new StackPane(), 400, 600));
+        primaryStage.show();
     }
 }
