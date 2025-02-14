@@ -16,3 +16,8 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+## JavaFX Dependency
+
+To run the project you need to have the dependencies related to javafx in the `javafx-sdk-23.0.2` folder in the project root.
+The download can be found [here](https://jdk.java.net/javafx23/).

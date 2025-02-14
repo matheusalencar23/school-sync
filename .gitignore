@@ -28,3 +28,6 @@ replay_pid*
 
 # Dependencies used in the project
 !/lib/*.jar
+
+# JavaFX
+/javafx-sdk-*/
