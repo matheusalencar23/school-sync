@@ -12,7 +12,7 @@ public class DbConnectionFactory {
             return conn;
 
         try {
-            final String url = "jdbc:mysql://localhost";
+            final String url = "jdbc:mysql://localhost:3306/school-sync-db";
             final String user = "admin";
             final String password = "admin";
 
