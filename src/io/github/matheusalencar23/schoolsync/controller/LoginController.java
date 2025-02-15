@@ -1,9 +1,9 @@
 package io.github.matheusalencar23.schoolsync.controller;
 
-import io.github.matheusalencar23.exceptions.ResourceNotFoundException;
 import io.github.matheusalencar23.schoolsync.SceneManager;
 import io.github.matheusalencar23.schoolsync.dao.user.UserDao;
 import io.github.matheusalencar23.schoolsync.dao.user.UserDaoImpl;
+import io.github.matheusalencar23.schoolsync.exceptions.ResourceNotFoundException;
 import io.github.matheusalencar23.schoolsync.model.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -28,12 +28,13 @@ public class LoginController {
         try {
             UserDao userDao = new UserDaoImpl();
             User user = userDao.findByUsername(username);
-            System.out.println(user);
+
+            if (user.getRole().equals("STUDENT")) {
+                SceneManager.switchTo("SchollSync | " + user.getUsername(), "view/student-dashboard.fxml");
+            }
         } catch (ResourceNotFoundException e) {
             System.out.println("erro");
             errorLabel.setText("Credenciais inválidas");
         }
-
-        // SceneManager.switchTo("SchollSync", "view/main.fxml");
     }
 }

@@ -8,10 +8,12 @@ public class DbConnectionFactory {
     private static Connection conn;
 
     public static Connection getConnection() {
-        if (conn != null)
-            return conn;
 
         try {
+            if (conn != null && !conn.isClosed()) {
+                return conn;
+            }
+
             final String url = "jdbc:mysql://localhost:3306/school-sync-db";
             final String user = "admin";
             final String password = "admin";
