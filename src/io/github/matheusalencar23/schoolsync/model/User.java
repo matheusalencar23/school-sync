@@ -5,12 +5,15 @@ public class User {
     private String username;
     private String password;
     private String role;
+    private Integer personId;
+    private Person person;
 
-    public User(Integer id, String username, String password, String role) {
+    public User(Integer id, String username, String password, String role, Integer personId) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.role = role;
+        this.personId = personId;
     }
 
     public Integer getId() {
@@ -45,6 +48,22 @@ public class User {
         this.role = role;
     }
 
+    public Integer getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -53,6 +72,8 @@ public class User {
         result = prime * result + ((username == null) ? 0 : username.hashCode());
         result = prime * result + ((password == null) ? 0 : password.hashCode());
         result = prime * result + ((role == null) ? 0 : role.hashCode());
+        result = prime * result + ((personId == null) ? 0 : personId.hashCode());
+        result = prime * result + ((person == null) ? 0 : person.hashCode());
         return result;
     }
 
@@ -84,6 +105,16 @@ public class User {
             if (other.role != null)
                 return false;
         } else if (!role.equals(other.role))
+            return false;
+        if (personId == null) {
+            if (other.personId != null)
+                return false;
+        } else if (!personId.equals(other.personId))
+            return false;
+        if (person == null) {
+            if (other.person != null)
+                return false;
+        } else if (!person.equals(other.person))
             return false;
         return true;
     }

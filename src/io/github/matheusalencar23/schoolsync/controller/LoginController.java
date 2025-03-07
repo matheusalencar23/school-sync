@@ -2,7 +2,6 @@ package io.github.matheusalencar23.schoolsync.controller;
 
 import io.github.matheusalencar23.schoolsync.SceneManager;
 import io.github.matheusalencar23.schoolsync.exceptions.InvalidCredentials;
-import io.github.matheusalencar23.schoolsync.exceptions.ResourceNotFoundException;
 import io.github.matheusalencar23.schoolsync.model.User;
 import io.github.matheusalencar23.schoolsync.service.UserService;
 import javafx.fxml.FXML;

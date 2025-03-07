@@ -1,4 +1,4 @@
-package io.github.matheusalencar23.schoolsync.dao.user;
+package io.github.matheusalencar23.schoolsync.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,11 +9,10 @@ import io.github.matheusalencar23.schoolsync.db.DbConnectionFactory;
 import io.github.matheusalencar23.schoolsync.exceptions.InvalidCredentials;
 import io.github.matheusalencar23.schoolsync.model.User;
 
-public class UserDaoImpl implements UserDao {
+public class UserDao {
 
-    @Override
     public User findByUsername(String username) throws RuntimeException {
-        String sql = "select * from user where username = ?";
+        String sql = "select * from users where username = ?";
 
         try (Connection conn = DbConnectionFactory.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -22,11 +21,11 @@ public class UserDaoImpl implements UserDao {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                return new User(
-                        rs.getInt("id"),
-                        rs.getString("username"),
-                        rs.getString("password"),
-                        rs.getString("user_role"));
+                Integer id = rs.getInt("id");
+                String password = rs.getString("password");
+                String role = rs.getString("user_role");
+                Integer personId = rs.getInt("person_id");
+                return new User(id, username, password, role, personId);
             } else {
                 throw new InvalidCredentials("User not found with username: " + username);
             }
