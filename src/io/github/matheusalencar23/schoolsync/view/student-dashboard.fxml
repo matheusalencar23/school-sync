@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.matheusalencar23.schoolsync.controller.StudentDashboardController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="1200.0" style="-fx-font-weight: bold; -fx-border-color: #4facfe; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 2;" text="SchoolSync" textAlignment="CENTER" textFill="#4facfe" VBox.vgrow="ALWAYS">
          <font>
@@ -60,6 +59,25 @@
                   </Label>
                </children>
             </VBox>
+         </children>
+      </HBox>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="632.0" prefWidth="1200.0">
+         <children>
+            <VBox maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: blue;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="helloLabel" text="" />
+               </children>
+               <padding>
+                  <Insets left="32.0" top="32.0" />
+               </padding>
+            </VBox>
+            <VBox maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: red;" />
          </children>
       </HBox>
    </children>

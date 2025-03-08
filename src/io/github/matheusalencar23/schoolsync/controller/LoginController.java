@@ -2,6 +2,7 @@ package io.github.matheusalencar23.schoolsync.controller;
 
 import io.github.matheusalencar23.schoolsync.SceneManager;
 import io.github.matheusalencar23.schoolsync.exceptions.InvalidCredentials;
+import io.github.matheusalencar23.schoolsync.global.AppState;
 import io.github.matheusalencar23.schoolsync.model.User;
 import io.github.matheusalencar23.schoolsync.service.UserService;
 import javafx.fxml.FXML;
@@ -32,6 +33,7 @@ public class LoginController {
 
             UserService service = new UserService();
             User user = service.login(username, password);
+            AppState.getInstance().setCurrentUser(user);
 
             if (user.getRole().equals("STUDENT")) {
                 SceneManager.switchTo("SchollSync | " + user.getUsername(), "view/student-dashboard.fxml");
