@@ -1,67 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-  <columnConstraints>
-    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="ALWAYS" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-  </rowConstraints>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER" prefWidth="200.0" style="-fx-border-style: hidden hidden solid hidden; -fx-background-color: #e0e0e0;" GridPane.columnSpan="2">
+      <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="1200.0" style="-fx-font-weight: bold; -fx-border-color: #4facfe; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 2;" text="SchoolSync" textAlignment="CENTER" textFill="#4facfe" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="200.0" style="-fx-border-style: hidden hidden solid hidden; -fx-border-width: 2; -fx-border-color: #4facfe; -fx-background-color: #fff;">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="660.0" text="SchoolSync" textFill="#4facfe">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../assets/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="198.0" text="Calendário de Provas e Trabalhos" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../assets/grid.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="198.0" text="Grade de Horários" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../assets/exam.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="198.0" text="Notas e Frequências" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: red;" GridPane.columnSpan="2" GridPane.rowIndex="1">
-         <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="140.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="164.0" text="ICONE" textAlignment="CENTER" />
-                  <Label alignment="CENTER" text="Calendário de Provas e Trabalhos" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="140.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="177.0" text="ICONE" textAlignment="CENTER" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="14.0" prefWidth="197.0" text="Grade de horários" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="140.0">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="225.0" text="ICONE" textAlignment="CENTER" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="14.0" prefWidth="205.0" text="Notas e frequências" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: blue;" GridPane.columnSpan="2" GridPane.rowIndex="2" />
    </children>
-</GridPane>
+</VBox>
