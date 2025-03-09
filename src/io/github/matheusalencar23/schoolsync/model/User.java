@@ -8,6 +8,9 @@ public class User {
     private Integer personId;
     private Person person;
 
+    public User() {
+    }
+
     public User(Integer id, String username, String password, String role, Integer personId) {
         this.id = id;
         this.username = username;

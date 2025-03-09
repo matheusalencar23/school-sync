@@ -22,8 +22,9 @@ public class PersonDao {
 
             if (rs.next()) {
                 String name = rs.getString("name");
+                String cpf = rs.getString("cpf");
                 Date birthDate = rs.getDate("birth_date");
-                return new Person(id, name, birthDate);
+                return new Person(id, name, cpf, birthDate);
             } else {
                 throw new InvalidCredentials("Person not found with id: " + id);
             }
